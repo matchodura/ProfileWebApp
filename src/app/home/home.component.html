@@ -1,1 +1,16 @@
-<p>home works!</p>
+<div class ="page-container">
+    <div class="sidebar">
+        <div class="topMenu">
+            <img  [src]="profilePicture" alt="Avatar">
+        </div>
+        <a href="#" routerLink = "/"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="#" routerLink = "/about"><i class="fa fa-fw fa-user"></i> About</a>
+        <a href="#" routerLink = "/projects"><i class="fa fa-fw fa-wrench"></i> Projects</a> 
+        <a href="#" routerLink = "/contact"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
+    </div>
+
+    <div class="page-content-container">
+        <router-outlet></router-outlet>
+    </div>
+        
+</div>
