@@ -12,8 +12,10 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
 
-  profilePicture: string ='assets/img/logo.jpg';
+  // profilePicture: string ='assets/img/logo.jpg';
 
+  profilePicture: string ='assets/img/main_photo.jpg';
+  profilePictureBackground: string = 'assets/img/background.jpg';
 
   constructor() { }
 
@@ -21,6 +23,9 @@ export class HomeComponent implements OnInit {
   
   }
 
- 
+  getUrl(){
+    console.log(this.profilePictureBackground);
+   return this.profilePictureBackground;
+}
 
 }
