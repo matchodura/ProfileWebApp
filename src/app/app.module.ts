@@ -9,6 +9,9 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { FormsModule }  from '@angular/forms';
 
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+// import { MatSliderModule } from '@angular/material/slider';
 
 
 @NgModule({
@@ -18,11 +21,16 @@ import { FormsModule }  from '@angular/forms';
     ProjectsComponent,
     ContactComponent,
     AboutComponent
+    
+    
   ],
   imports: [
+    // MatSliderModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule
+    
+    // BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

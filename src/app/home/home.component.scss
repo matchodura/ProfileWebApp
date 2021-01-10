@@ -1,86 +1,185 @@
 .page-container{
     display: flex;
     height: 100%;
-    background: rgb(35,42,58);
+    // background: rgb(35,42,58);
+    background: grey;
 
-}
-
-.page-content-container{
-    padding: 50px;
-}
-
-.sidebar {
-    float: left;
-    height: 100%;
-    width: 10%;
-    // position: fixed;
-   
-    top: 0;
-    left: 0;
-    background-color: rgba(0,0,0,0.2);
-    overflow-x: hidden;
-    padding-top: 0px;
-
-    a{
-        padding: 6px 8px 6px 16px;
-        text-decoration: none;
-        font-size: 20px;
-        color: #818181;
-        display: block;
-        
-
-    }
-
-    a:hover{
-
-        color: #f1f1f1;
-
-    }
-
-
+    .sidebar {
+        // float: left;
+        height: 100%;
+        width: 20%;
+        // position: fixed;
+       
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.8);
+        overflow-x: hidden;
+        padding-top: 0px;
     
 
-    .sidebar-header{
-       
-        width: 100%;
-        height: 20%;        
+
         
-        .background-image{
-            
-            height: 100%;
-            width: 100%;
-            background-image: url(/assets/img/background.jpg);
-            
-            background-repeat: no-repeat;
-            background-size: cover;
-           
+        .list-item{
+            width: auto;
+            height: auto;
+
+            display: flex;        
+            align-items: left;
+            justify-content: left;
+
             position: relative;
 
-            img{
-              
-                max-height: 75%;
-                max-width: 75%;
-                width: auto;
-                height: auto;
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                margin: auto;
+            font-size: 22px;
+            color:black;
+            padding: 10px 20px;
+            text-decoration: none;
 
-                border-radius: 50%;
-                border: 2px solid blueviolet;
-            }
+            margin-left: 5%;
+            margin-top: 10%;
 
+            cursor: pointer;
+            
+           i{
+               margin-right: 15%;
+           }
+           
            
         }
+
         
         
+        
+        .list-item:hover{
     
-       
-       
-    } 
-  }
+            color: #f1f1f1;
+      
+              
+        }
+
+        .list-item::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 2%;
+            background-color: orange;
+
+            opacity: 0;
+            transform: scaleY(0);
+
+            transition: transform 0.2s, opacity 0.2s ;
+        }
+     
+        .list-item:hover::before{
+            opacity: 1;
+            transform: scaleY(1);            
+        }
+
+        // .list-item.selected{
+        //     background: orange;
+        // }
+
+
+        .list-item-options{
+            width: auto;
+            height: auto;
+
+            display: flex;        
+            align-items: left;
+            justify-content: left;
+
+            position: relative;
+
+            font-size: 16px;
+            color:black;
+            padding: 10px 20px;
+            text-decoration: none;
+
+            margin-left: 55%;
+            margin-top: 10%;
+            text-decoration: none;
+    
+            margin-left: 5%;
+            margin-top: 10%;
+
+            i{
+                margin-right: 15%;
+            }
+               
+        }
+        .header{
+           
+            width: 100%;
+            height: 30%;        
+            
+            .background-image{
+                
+                height: 100%;
+                width: 100%;
+                background-image: url(/assets/img/background.jpg);
+                
+                background-repeat: no-repeat;
+                background-size: cover;
+               
+                position: relative;
+    
+                img{
+                  
+                    max-height: 60%;
+                    max-width: 60%;
+                    width: auto;
+                    height: auto;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+    
+                    border-radius: 50%;
+                    border: 2px solid blueviolet;
+                }
+    
+               
+            }
+            
+            
+        
+           
+           
+        } 
+      }
+
+      .page-content-container{
+
+        width: 100%;
+        height: 100%;
+    
+        .page-content-header{
+            top:0;
+
+            height: 30%;
+            width: 100%;
+            
+            background-color: yellow;
+           
+        }
+    
+        .page-content{
+    
+            width: 100%;
+            height: 70%;
+            padding: 0;
+            background-color: brown;
+           
+        }
+    
+    }
+
+}
+
+
+
   
 

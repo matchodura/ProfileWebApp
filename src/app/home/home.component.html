@@ -1,9 +1,7 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 <div class ="page-container">
 
     <div class="sidebar">
-        <div class="sidebar-header">
+        <div class="header">
                <div class="background-image">
                     <div class="profile-image">
                           <img  [src]="profilePicture" alt="Avatar" class="profile-image">
@@ -11,27 +9,57 @@
                </div>
         </div>
 
-        <div class="sidebar-list-contents">
-            <ul>
-                <a href="#" routerLink = "/"><i class="fa fa-fw fa-home"></i> Home</a>
-            </ul>
-            <ul>
-                <a href="#" routerLink = "/about"><i class="fa fa-fw fa-user"></i> About</a>
+        <div class="list-items">
+           
+           <a routerLink = "/" routerLinkActive="selected" class="list-item"><i class="fa fa-fw fa-home"></i>Home</a>
+           <a routerLink = "/about" routerLinkActive="selected" class="list-item"><i class="fa fa-fw fa-user"></i>About</a>
 
-            </ul>
-            <ul>
-                <a href="#" routerLink = "/projects"><i class="fa fa-fw fa-wrench"></i> Projects</a> 
+       
+           <div (mouseenter)="viewProjects=true" (mouseleave)="viewProjects=false">
+            <a routerLink = "/projects" routerLinkActive="selected" class="list-item"><i class="fa fa-fw fa-wrench"></i>Projects</a>
+           
 
-            </ul>
-            <ul>
-                <a href="#" routerLink = "/contact"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
-            </ul>
+      
+
+            <span *ngIf="viewProjects">
+                     <a routerLink = "/projects" routerLinkActive="selected" class="list-item-options"><i class="fa fa-fw fa-circle"></i>Projects</a>
+            </span>
+
+            <span *ngIf="viewProjects">
+                <p (click)="getDiv()" {} class="list-item-options"><i class="fa fa-fw fa-circle"></i>Projects</p>
+                
+            </span>
+
+            <span *ngIf="viewProjects">
+                <a routerLink = "/projects" routerLinkActive="selected" class="list-item-options"><i class="fa fa-fw fa-circle"></i>Projects</a>
+            </span>
+
+         </div>
+      
+
+
+        
+           <a routerLink = "/contact" routerLinkActive="selected" class="list-item"><i class="fa fa-fw fa-envelope"></i>Contact</a>         
+           
+           
+           
+          
         </div>
         
     </div>
 
+    
+
     <div class="page-content-container">
-        <router-outlet></router-outlet>
+        <div class="page-content-header">            
+        </div>
+
+        <div class="page-content">
+            <router-outlet></router-outlet>
+        </div>
+        
     </div>
         
-</div>
+</div> 
+
+
