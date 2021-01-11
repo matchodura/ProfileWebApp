@@ -8,11 +8,20 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { FormsModule }  from '@angular/forms';
+import { SkillsComponent } from './skills/skills.component';
 
-// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MainNavComponent } from './main-nav/main-nav.component';
 
-// import { MatSliderModule } from '@angular/material/slider';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
+import { MatSliderModule } from '@angular/material/slider';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,17 +29,26 @@ import { FormsModule }  from '@angular/forms';
     HomeComponent,
     ProjectsComponent,
     ContactComponent,
-    AboutComponent
+    AboutComponent,
+    SkillsComponent,
+    MainNavComponent
     
     
   ],
   imports: [
-    // MatSliderModule,
+   
     BrowserModule,
     AppRoutingModule,
-    FormsModule
-    
-    // BrowserAnimationsModule
+    FormsModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatSliderModule,
+    BrowserAnimationsModule
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

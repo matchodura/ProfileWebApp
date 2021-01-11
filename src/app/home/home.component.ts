@@ -15,7 +15,12 @@ export class HomeComponent implements OnInit {
   // profilePicture: string ='assets/img/logo.jpg';
 
   profilePicture: string ='assets/img/main_photo.jpg';
+  // profilePicture: string ='assets/img/test.jpg';
+
+
   profilePictureBackground: string = 'assets/img/background.jpg';
+
+
 
   viewProjects: boolean;
 

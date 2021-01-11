@@ -1,4 +1,4 @@
-<div class ="page-container">
+<!-- <div class ="page-container">
 
     <div class="sidebar">
         <div class="header">
@@ -9,43 +9,52 @@
                </div>
         </div>
 
-        <div class="list-items">
-           
-           <a routerLink = "/" routerLinkActive="selected" class="list-item"><i class="fa fa-fw fa-home"></i>Home</a>
-           <a routerLink = "/about" routerLinkActive="selected" class="list-item"><i class="fa fa-fw fa-user"></i>About</a>
-
-       
-           <div (mouseenter)="viewProjects=true" (mouseleave)="viewProjects=false">
-            <a routerLink = "/projects" routerLinkActive="selected" class="list-item"><i class="fa fa-fw fa-wrench"></i>Projects</a>
-           
-
-      
-
-            <span *ngIf="viewProjects">
-                     <a routerLink = "/projects" routerLinkActive="selected" class="list-item-options"><i class="fa fa-fw fa-circle"></i>Projects</a>
-            </span>
-
-            <span *ngIf="viewProjects">
-                <p (click)="getDiv()" {} class="list-item-options"><i class="fa fa-fw fa-circle"></i>Projects</p>
-                
-            </span>
-
-            <span *ngIf="viewProjects">
-                <a routerLink = "/projects" routerLinkActive="selected" class="list-item-options"><i class="fa fa-fw fa-circle"></i>Projects</a>
-            </span>
-
-         </div>
-      
-
-
         
-           <a routerLink = "/contact" routerLinkActive="selected" class="list-item"><i class="fa fa-fw fa-envelope"></i>Contact</a>         
+        <div class="items-list">
            
-           
-           
-          
+          <div class="item-container">
+              <div class="item">             
+                  <a routerLink = "/" routerLinkActive="selected"><i class="fa fa-fw fa-home"></i>Home</a>
+              </div>
+          </div>
+
+          <div class="item-container">
+             <div class="item">
+                  <a routerLink = "/about" routerLinkActive="selected"><i class="fa fa-fw fa-user"></i>About</a>
+             </div>
+          </div>
+
+          <div class="item-container">
+             <div class="item">
+                  <a routerLink = "/projects" routerLinkActive="selected"><i class="fa fa-fw fa-tasks"></i>Projects</a> 
+             </div>
+          </div>
+
+          <div class="item-container">
+              <div class="item">
+                 <a routerLink = "/skills" routerLinkActive="selected"><i class="fa fa-fw fa-wrench"></i>Skills</a> 
+              </div>
+          </div>
+
+          <div class="item-container">
+            <div class="item">
+                  <a routerLink = "/contact" routerLinkActive="selected"><i class="fa fa-fw fa-envelope"></i>Contact</a>   
+            </div>      
+          </div>       
+
         </div>
-        
+                
+        <div class="contact">
+
+            <div class="icon">
+                <a href="https://www.linkedin.com/in/mateuszchodura/" target="_blank"><i class="fa fa-fw fa-linkedin"></i></a>                
+            </div>
+            
+            <div class="icon">
+                <a href="https://www.github.com/matchodura/" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+            </div>                 
+                                     
+         </div>
     </div>
 
     
@@ -62,4 +71,7 @@
         
 </div> 
 
-
+ -->
+ <div class="container">
+    <p>dupa home</p>
+ </div>
