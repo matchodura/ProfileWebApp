@@ -5,6 +5,8 @@ import { map, shareReplay } from 'rxjs/operators';
 
 import {HostListener} from '@angular/core';
 
+
+
 @Component({
   selector: 'app-main-nav',
   templateUrl: './main-nav.component.html',
@@ -20,20 +22,77 @@ export class MainNavComponent {
   events: string[] = [];
   //opened: boolean;
   navbarContactLinks:string = '';
+  navbarMobileListItems:string ='';
+  navbarHeader:string ='';
+  showToggle:boolean=false;
 
-  @HostListener('window:resize', ['$event'])
+  
 
 
-  getScreenHeight(){
-    console.log(window.innerHeight);
+    public innerWidth: any;
+    public innerHeight: any;
+
+    ngOnInit() {
+        this.innerWidth = window.innerWidth;
+        this.innerHeight = window.innerHeight;
+    }
+    
+  constructor(private breakpointObserver: BreakpointObserver) {
+ 
+    this.getScreenDimensions();
+  
+  }
+
+
+
+
+  
+  @HostListener('window:resize', ['$event'] )
+  getScreenDimensions(){
+
+    this.innerHeight = window.innerHeight;
+    this.innerWidth = window.innerWidth;
+
+    // console.log(window.innerHeight);
+    // console.log(window.innerWidth);
+
+
+    //keeping githuband linkedin links to not overlap other pages
     if(window.innerHeight<=412){
       this.navbarContactLinks = 'bottomRelative';
-      console.log('relative');
+      // console.log('relative');
     }else{
       this.navbarContactLinks = 'bottomAbsolute';
-      console.log('absolute');
+      // console.log('absolute');
     }
+
+    if(window.innerWidth>500){
+
+      this.navbarMobileListItems = 'navbarMobileAbsolute';
+      this.navbarHeader = 'headerMobileDisplay';
+      console.log('a');
+      this.showToggle = false;
+     
+    }
+
+    if(window.innerWidth<=500 && window.innerWidth > 450){
+
+      this.navbarMobileListItems = 'navbarMobileRelative';
+      console.log('b');
+      this.showToggle = false;
+    }
+    if(window.innerWidth<=450){
+
+      this.navbarMobileListItems = 'navbarMobileHide';
+      this.navbarHeader = 'headerMobileHide';
+      console.log('znikamy');
+      this.showToggle = true;
+      console.log('c');
+    }   
+
   }
+
+
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -41,9 +100,6 @@ export class MainNavComponent {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {
 
-    this.getScreenHeight();
-  }
 
 }
