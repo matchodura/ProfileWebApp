@@ -3,51 +3,54 @@
 }
 
 .sidenav {
-  width: 20%;
-}
-
-.sidenav .mat-toolbar {
+  width: 150px;
+  background-color: red;
  
-  background-color: yellow;
-  
-  height: 15%;
-  
-.header{
+  .mat-toolbar{
+
+    height: 15%;
     
-  width: 100%;
-  height: 100%;        
   
-  .background-image{
-      
-      height: 100%;
-      width: 100%;
-      background-image: url(/assets/img/background.jpg);
-      
-      background-repeat: no-repeat;
-      background-size: cover;
-     
-      position: relative;
-
-      img{
-        
-          max-height: 100%;
-          max-width: 100%;
-          width: auto;
-          height: auto;
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          margin: auto;
-
-          border-radius: 50%;
-          border: 2px solid blueviolet;
       }
-    }
+
   }
 
-}
+
+.header{
+
+    height: 100px;
+    
+    .background-image{
+  
+            height: 100%;
+            width: 100%;
+            background-image: url(/assets/img/background.jpg);
+            
+            background-repeat: no-repeat;
+            background-size: cover;
+           
+            position: relative;
+        
+            img{
+              
+                max-height: 75%;
+                max-width: 75%;
+                width: auto;
+                height: auto;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+      
+                border-radius: 50%;
+                border: 2px solid blueviolet;
+            }
+          }
+        }
+
+
 
 .mat-toolbar.mat-primary {
   position: sticky;
@@ -56,7 +59,47 @@
 }
 
 .mat-toolbar{
+
+  height: 50px;
+
   a{
     text-decoration: none;
   }
 }
+
+.mat-list-item:hover{
+
+           color:white;
+}
+
+.mat-list-item::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 2%;
+            background-color: black;
+
+            opacity: 0;
+            transform: scaleY(0);
+
+            transition: transform 0.2s, opacity 0.2s ;
+        }
+     
+.mat-list-item:hover::before{
+            opacity: 1;
+            transform: scaleY(1);            
+        }
+
+
+.bottomAbsolute{
+  
+  position:absolute; 
+  bottom:0
+}
+
+.bottomRelative{
+  position:relative;
+}
+
