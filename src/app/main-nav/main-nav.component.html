@@ -7,54 +7,58 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
+    
+    <div class="header">       
+      <div class="background">
+        <h2>Mateusz Chodura</h2>
+        <!-- <div class="profile-image">
+          <img  [src]="profilePicture" alt="Avatar" class="profile-image">
+        </div>                                     -->
+      </div> 
+    </div>     
 
-
-
-    <!-- <mat-toolbar> -->
-      <div class="header">       
-       <div class="background-image">
-             <div class="profile-image">
-                   <img  [src]="profilePicture" alt="Avatar" class="profile-image">
-             </div>                                    
-        </div> 
+    <mat-nav-list>     
+      <div class="contact-links">
+        <div class="item">
+          <a href="https://www.linkedin.com/in/mateuszchodura/" target="_blank"><i class="fa fa-fw fa-linkedin"></i></a> 
+        </div>
+        <div class="item">
+          <a href="https://www.github.com/matchodura/" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+        </div>           
       </div>
-    <!-- </mat-toolbar> -->
 
-
-
-
-    <mat-nav-list>
       <a mat-list-item routerLink = "/"><i class="fa fa-fw fa-home"></i>Home</a>    
       <a mat-list-item routerLink = "/about"><i class="fa fa-fw fa-user"></i>About</a>
+      <a mat-list-item routerLink = "/education"><i class="fa fa-fw fa-graduation-cap"></i>Education</a>
       <a mat-list-item routerLink = "/projects"><i class="fa fa-fw fa-tasks"></i>Projects</a>
       <a mat-list-item routerLink = "/skills"><i class="fa fa-fw fa-wrench"></i>Skills</a>
-      <a mat-list-item routerLink = "/contact"><i class="fa fa-fw fa-envelope"></i>Contact</a>
-  
+      <a mat-list-item routerLink = "/contact"><i class="fa fa-fw fa-envelope"></i>Contact</a>  
 
-       <div [ngClass]='navbarContactLinks'> 
-        <a mat-list-item href="https://www.linkedin.com/in/mateuszchodura/" target="_blank"><i class="fa fa-fw fa-linkedin"></i></a>  
-        <a mat-list-item href="https://www.github.com/matchodura/" target="_blank"><i class="fa fa-fw fa-github"></i></a>
-      </div>
-           
-    </mat-nav-list>
+    </mat-nav-list>    
 
-    
   </mat-sidenav>
-  <mat-sidenav-content>
-    
+  <mat-sidenav-content>    
     <mat-toolbar  *ngIf="isHandset$ | async" color="primary">
-      
-      <!-- <span>ProfileWebApp</span> -->
+
+      <!-- <div [ngClass]='navbarHeader'>       
+        <div class="background-image">
+          <div class="profile-image">
+            <img  [src]="profilePicture" alt="Avatar" class="profile-image">
+          </div>                                    
+        </div>          
+      </div> -->
 
       <div [ngClass]='navbarHeader'>       
-           <div class="background-image">
-                <div class="profile-image">
-                     <img  [src]="profilePicture" alt="Avatar" class="profile-image">
-                </div>                                    
-           </div>          
-       </div>
+        <div class="background">
+          <h2>Mateusz Chodura</h2>
+          <!-- <div class="profile-image">
+            <img  [src]="profilePicture" alt="Avatar" class="profile-image">
+          </div>                                     -->
+        </div>          
+      </div>
 
-    
+
+
 
       <div [ngClass]='navbarMobileListItems'>
      
@@ -63,9 +67,9 @@
         <a mat-list-item *ngIf="isHandset$ | async" routerLink = "/projects"><i class="fa fa-fw fa-tasks"></i>Projects</a>
         <a mat-list-item *ngIf="isHandset$ | async" routerLink = "/skills"><i class="fa fa-fw fa-wrench"></i>Skills</a>
         <a mat-list-item *ngIf="isHandset$ | async" routerLink = "/contact"><i class="fa fa-fw fa-envelope"></i>Contact</a>
+
       </div>
-        
-        
+                
      
       <div class="toggle-button-container">
         <button
@@ -76,11 +80,10 @@
         *ngIf="showToggle">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
          </button>
-    </div>
+      </div>
 
     
     </mat-toolbar>
-
     <router-outlet></router-outlet>
     
   </mat-sidenav-content>

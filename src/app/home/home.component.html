@@ -1,8 +1,12 @@
  <div class="container">
-    <div class="page-header">
-        kogo witam kogo goszczę
+    <div [ngClass] = "{'page-header-mobile' : (isHandset$ | async),'page-header' : !(isHandset$ | async) }">
+      <h1 class="page-title">
+            kogo witam kogo goszczę
+          
+      </h1>        
     </div>
 
+    
     <div class="page-content">
 
         <p>Mój stary to fanatyk wędkarstwa. Pół mieszkania zajebane wędkami najgorsze. Średnio raz w miesiącu ktoś wdepnie w leżący na ziemi haczyk czy kotwicę i trzeba wyciągać w szpitalu bo mają zadziory na końcu. W swoim 22 letnim życiu już z 10 razy byłem na takim zabiegu. Tydzień temu poszedłem na jakieś losowe badania to baba z recepcji jak mnie tylko zobaczyła to kazała buta ściągać xD bo myślała, że znowu hak w nodze.

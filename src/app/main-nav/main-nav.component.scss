@@ -2,54 +2,78 @@
   height: 100%;
 }
 
+
 .sidenav {
+  // background-color: #5D5C61;  
+  // background-color: #557A95;  
+  // background-color: darken($color: #44318D, $amount: 10);  
+  // background-color: darken($color: #2A1B3D, $amount: 1);  
+  background-color: darken($color: #2A1B3D, $amount: 0);  
   width: 150px;
-  background-color: red;
- 
-  .mat-toolbar{
-
-    height: 15%;
-    
-  
-      }
-
+  border-color: darken($color: #2A1B3D, $amount: 10);
+  border-width: 5px;
   }
 
 
-.header{
-
-    height: 100px;
+.header {
+    height: 125px;  
     
-    .background-image{
-  
-            height: 100%;
-            width: 100%;
-            background-image: url(/assets/img/background.jpg);
-            
-            background-repeat: no-repeat;
-            background-size: cover;
-           
-            position: relative;
-        
-            img{
-              
-                max-height: 75%;
-                max-width: 75%;
-                width: auto;
-                height: auto;
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                margin: auto;
+    
+    .background {       
+      // background-image: url(/assets/img/background.jpg); 
+      // background-repeat: no-repeat;
+      // background-size: cover;
+      background-color:darken($color: #2A1B3D, $amount: 10);
+     
+      position: relative;  
+      height: 100%;
+      width: auto;
       
-                border-radius: 50%;
-                border: 2px solid blueviolet;
-            }
-          }
-        }
+        
+      h2{
+        padding: 0;
+        top: 0;
+        position: absolute;
+        color: white;
+        text-align: center;
+        
 
+      }
+
+        img {
+          border: 2px solid blueviolet;
+          border-radius: 50%;
+          position: absolute;
+          max-height: 75%;
+          max-width: 75%;
+          width: auto;
+          height: auto;         
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;    
+      }
+   }
+}
+
+
+.contact-links {
+  // background-color: darken($color: #44318D, $amount: 10);
+  background-color: darken($color: #2A1B3D, $amount: 5);  
+  // background-color: #44318D;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 30px;
+  
+
+  .item:hover {
+    color: #44318D;
+
+  }
+}
 
 
 .mat-toolbar.mat-primary {
@@ -58,120 +82,137 @@
   z-index: 1;
 }
 
-.mat-toolbar{
 
-  padding: 0;
+.mat-toolbar {
   height: 50px;
+  padding: 0;
+  background-color: darken($color: #2A1B3D, $amount: 0);  
 
-  a{
-    text-decoration: none;
+    a{
+      text-decoration: none;
+     
   }
 }
 
-.mat-list-item:hover{
 
-           color:white;
+.mat-list-item {
+  color:white;
+    
 }
 
-.mat-list-item::before{
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 2%;
-            background-color: black;
+::ng-deep .mat-list-item-content {
+  padding: 0 25 !important;
+  justify-content: left;
+  i {
+    margin-right: 15px;
+  }
 
-            opacity: 0;
-            transform: scaleY(0);
+}
 
-            transition: transform 0.2s, opacity 0.2s ;
-        }
+
+.mat-list-item:hover {
+  // color: #44318D;
+  color: darken($color: #2A1B3D, $amount: 50);
+
+}
+
+
+.mat-list-item::before {
+  background-color: darken($color: #2A1B3D, $amount: 10);
+  content: '';  
+  position: absolute;
+  height: 100%;
+  width: 10px;
+  top: 0;
+  left: 0;    
+  opacity: 0;
+  transform: scaleY(0);
+  transition: transform 0.2s, opacity 0.2s ;
+}
      
-.mat-list-item:hover::before{
-            opacity: 1;
-            transform: scaleY(1);            
-        }
 
-
-.bottomAbsolute{
-  
-  position:absolute; 
-  bottom:0
+.mat-list-item:hover::before {
+  opacity: 1;
+  transform: scaleY(1);            
 }
 
-.bottomRelative{
-  position:relative;
+
+.bottomAbsolute {  
+  position: absolute; 
+  bottom: 0;
 }
 
-.headerMobileDisplay{
-  // position: absolute;
-  // flex: 1 1 auto;
+
+.bottomRelative {
+  position: relative;
+}
+
+
+.header-mobile-display { 
+  background-color: red;
   width: 50px;
   height: 50px;
-  background-color: red;
+  
 
-
-
-  .background-image{
-
-          height: 100%;
-          width: 100%;
-          background-image: url(/assets/img/background.jpg);
-          
-          background-repeat: no-repeat;
-          background-size: cover;
-         
-          position: relative;
+  .background {       
+    // background-image: url(/assets/img/background.jpg); 
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    background-color:darken($color: #2A1B3D, $amount: 10);
+   
+    position: relative;  
+    height: 100%;
+    width: auto;
+    overflow-wrap: break-word;
       
-          img{
-            
-              max-height: 75%;
-              max-width: 75%;
-              width: auto;
-              height: auto;
-              position: absolute;
-              top: 0;
-              bottom: 0;
-              left: 0;
-              right: 0;
-              margin: auto;
-    
-              border-radius: 50%;
-              border: 2px solid blueviolet;
-          }
-        }
+    h2{
+      padding: 0;
+      top: 0;
+      position: relative;
+      color: white;
+      text-align: center;
+      font-size:12px;
+      height: 100%;
+
+    }
   }
+}
     
-.headerMobileHide{
+
+.header-mobile-hide {
   display:none;
 }
 
-.navbarMobileAbsolute{
-  
-  display:flex;
+
+.navbar-mobile-absolute {  
+  display: flex;
   position: absolute;
-  right:0;
+  right: 0;
   padding-right: 10px;
 }
 
-.navbarMobileRelative{
-  
-  display:flex;
-  position:relative;
-  // display:none;
-  right:0;
+
+.navbar-mobile-relative {  
+  display: flex;
+  position: relative;  
+  right: 0;
   padding-right: 10px;
 }
-.navbarMobileHide{
 
-  display:none;
- 
+
+.navbar-mobile-hide {
+  display: none; 
 }
 
-.toggle-button-container{
 
+.toggle-button-container {
   position: absolute;
-  right:0;
+  right: 0;
   padding-right: 10px;
+}
+
+
+
+.mat-nav-list {
+  padding-top: 0;
 }

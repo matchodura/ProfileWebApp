@@ -1,6 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router"
 
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Observable } from 'rxjs';
+import { map, shareReplay } from 'rxjs/operators';
+
+
+
+
 
 @Component({
   selector: 'app-home',
@@ -11,35 +18,25 @@ import { Router } from "@angular/router"
 
 export class HomeComponent implements OnInit {
 
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+    .pipe(
+      map(result => result.matches),
+      shareReplay()
+    );
 
-  // profilePicture: string ='assets/img/logo.jpg';
-
-  profilePicture: string ='assets/img/main_photo.jpg';
-  // profilePicture: string ='assets/img/test.jpg';
-
-
-  profilePictureBackground: string = 'assets/img/background.jpg';
-
-
-
-  viewProjects: boolean;
-
-  divName: string;
-
-
-  constructor(private router: Router) { 
-    this.viewProjects = false;
-    this.divName = 'div1';
-    
+  constructor(private breakpointObserver: BreakpointObserver) { 
+   
   }
+
+
+
 
   ngOnInit(): void {
   
   }
 
-  getDiv() {
-    this.router.navigate(['/projects'], { fragment: this.divName });
-  }
+  
+ 
 }
 
 

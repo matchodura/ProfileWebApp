@@ -1,5 +1,7 @@
 <div class="container">
-    <div class="page-header">
-        <p>ale to ty dzwonisz</p>
-    </div>
+  <div [ngClass] = "{'page-header-mobile' : (isHandset$ | async),'page-header' : !(isHandset$ | async) }">
+        <h1 class="page-title">
+              Contact
+        </h1>        
+      </div>
  </div>
