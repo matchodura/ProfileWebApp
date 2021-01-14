@@ -3,11 +3,7 @@
 }
 
 
-.sidenav {
-  // background-color: #5D5C61;  
-  // background-color: #557A95;  
-  // background-color: darken($color: #44318D, $amount: 10);  
-  // background-color: darken($color: #2A1B3D, $amount: 1);  
+.sidenav { 
   background-color: darken($color: #2A1B3D, $amount: 0);  
   width: 150px;
   border-color: darken($color: #2A1B3D, $amount: 10);
@@ -16,15 +12,11 @@
 
 
 .header {
-    height: 125px;  
+    height: 125px;      
     
-    
-    .background {       
-      // background-image: url(/assets/img/background.jpg); 
-      // background-repeat: no-repeat;
-      // background-size: cover;
-      background-color:darken($color: #2A1B3D, $amount: 10);
-     
+
+    .background {
+      background-color:darken($color: #2A1B3D, $amount: 10);     
       position: relative;  
       height: 100%;
       width: auto;
@@ -35,46 +27,44 @@
         top: 0;
         position: absolute;
         color: white;
-        text-align: center;
-        
-
+        text-align: center;      
       }
 
-        img {
-          border: 2px solid blueviolet;
-          border-radius: 50%;
-          position: absolute;
-          max-height: 75%;
-          max-width: 75%;
-          width: auto;
-          height: auto;         
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          margin: auto;    
+
+      img {
+        border: 2px solid blueviolet;
+        border-radius: 50%;
+        position: absolute;
+        max-height: 75%;
+        max-width: 75%;
+        width: auto;
+        height: auto;         
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;    
       }
    }
 }
 
 
-.contact-links {
-  // background-color: darken($color: #44318D, $amount: 10);
-  background-color: darken($color: #2A1B3D, $amount: 5);  
-  // background-color: #44318D;
+.contact-links {  
+  background-color: darken($color: #2A1B3D, $amount: 5);    
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   height: 30px;
   
+
   .item{
-    color:white;
+    color: white;
   }
+
 
   .item:hover {
     color: #44318D;
-
   }
 }
 
@@ -91,30 +81,28 @@
   padding: 0;
   background-color: darken($color: #2A1B3D, $amount: 0);  
 
-    a{
-      text-decoration: none;
-     
+    a {
+      text-decoration: none;     
   }
 }
 
 
 .mat-list-item {
-  color:white;
-    
+  color: white;    
 }
 
 ::ng-deep .mat-list-item-content {
-  padding: 0 23 !important;
+  padding: 0 20 !important;
   justify-content: left;
+
+
   i {
     margin-right: 5px;
   }
-
 }
 
 
 .mat-list-item:hover {
-  // color: #44318D;
   color: darken($color: #2A1B3D, $amount: 50);
 
 }
@@ -139,49 +127,27 @@
   transform: scaleY(1);            
 }
 
-
-.bottomAbsolute {  
-  position: absolute; 
-  bottom: 0;
-}
-
-
-.bottomRelative {
-  position: relative;
-}
-
-
-.header-mobile-display { 
-  background-color: red;
+.background {
   width: 50px;
   height: 50px;
+
   
-
-  .background {       
-    // background-image: url(/assets/img/background.jpg); 
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    background-color:darken($color: #2A1B3D, $amount: 10);
-   
-    position: relative;  
-    height: 100%;
-    width: auto;
-    overflow-wrap: break-word;
-      
-    h2{
-      padding: 0;
-      top: 0;
-      position: relative;
-      color: white;
+    .header-mobile-display {  
+      background-color:darken($color: #2A1B3D, $amount: 10);  
+      font-size: 12px;
       text-align: center;
-      font-size:12px;
-      height: 100%;
+      display: inline-grid;
+      width: 50px;
+      height: 50px;
 
-    }
+        .space-reducer {
+          
+          height: 10px;    
+   }  
   }
 }
-    
 
+    
 .header-mobile-hide {
   display: none;
 }
@@ -191,17 +157,22 @@
   display: flex;
   position: absolute;
   right: 0;
-  padding-right: 10px;
-  top: 0;
-  .mat-list-item{
-    font-size: 12px;
+  padding-right: 10px; 
+  font-size: 12px;
+  margin-top: 0;
 
+
+  .mat-list-item:hover {
+    color: darken($color: #2A1B3D, $amount: 50);
+  
   }
+  
+  
   .mat-list-item::before {
-    background-color: darken($color: #2A1B3D, $amount: 10);
+    background-color: darken($color: #2A1B3D, $amount: 10);    
     content: '';  
     position: absolute;
-    height: 3px;
+    height: 5px;
     width: 100%;
     top: 0;
     left: 0;    
@@ -209,31 +180,68 @@
     transform: scaleX(0);
     transition: transform 0.2s, opacity 0.2s ;
   }
-     
-
-  .mat-list-item:hover::before {
-  opacity: 1;
-  transform: scaleX(1);            
-  }
-
+       
   
+  .mat-list-item:hover::before {
+    opacity: 1;
+    transform: scaleX(1);            
+  }  
 }
 
-::ng-deep .navbar-mobile-absolute .mat-list-item-content {
-  padding: 0 25px !important;
-  
-  justify-content: left;
+::ng-deep  .navbar-mobile-absolute .mat-list-item-content {
+  padding: 10 20!important;
+  justify-content: top;
+  top: 0;
+
   i {
     margin-right: 5px;
   }
-
 }
+
+::ng-deep  .navbar-mobile-relative .mat-list-item-content {
+  padding: 10 20!important;
+  justify-content: top;
+  top: 0;
+
+  i {
+    margin-right: 5px;
+  }
+}
+
+
 
 .navbar-mobile-relative {  
   display: flex;
   position: relative;  
   right: 0;
   padding-right: 10px;
+  font-size: 12px;
+
+  
+  .mat-list-item:hover {
+    color: darken($color: #2A1B3D, $amount: 50);
+  
+  }
+  
+  
+  .mat-list-item::before {
+    background-color: darken($color: #2A1B3D, $amount: 10);    
+    content: '';  
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    top: 0;
+    left: 0;    
+    opacity: 0;
+    transform: scaleX(0);
+    transition: transform 0.2s, opacity 0.2s ;
+  }
+       
+  
+  .mat-list-item:hover::before {
+    opacity: 1;
+    transform: scaleX(1);            
+  }  
 }
 
 
@@ -251,7 +259,6 @@
 
 
 .mat-nav-list {
-  padding-top: 0;
-  
+  padding-top: 0;  
 }
 

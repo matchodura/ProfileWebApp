@@ -1,3 +1,4 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 html, body {
     min-height: 100%;
     margin: 0;
@@ -6,14 +7,9 @@ html, body {
 }
 
 
-
 .mat-drawer-inner-container::-webkit-scrollbar {
     display: none;
   }
-
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
-// html, body { height: 100%; }
-// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
 .page-header {
@@ -24,15 +20,13 @@ html, body {
     top: 0;
     position: absolute;
 
+
     .page-title{
         color: white;
         position: relative;
         margin-left: 30px;
-        font-size:32px;
-    
-    }
-
-    
+        font-size: 32px;    
+    }    
 }
 
 
@@ -43,43 +37,69 @@ html, body {
     position: absolute;
     top: 50px;
     
-    .page-title{
+
+    .page-title{ 
         color: white;
         position: relative;
         margin-left: 30px;
-        font-size:20px;
+        font-size: 20px;
     
-    }
-    
+    }    
 }
 
 
-
-
-
 .page-content{
-
-    top:0px;
+    top: 0px;
 }
 
 .container { 
     min-height: 100%;
-    width: 100%;
+    min-width: 100%;
     // background-color: #8265a7;
     // background-color: darken($color: #a4b3b6, $amount: 0);
     // background-color: darken($color: #44318D, $amount: 0);
  
     
-    p{
-    padding:0;
-    margin: 0;
-    color:white;
-    }
-
     background-size: 25px 25px;
     background-color: darken($color: #2A1B3D, $amount: 5);  
     background-image:
     linear-gradient(to right, darken($color: #2A1B3D, $amount: 10) 1px, transparent 1px),
     linear-gradient(to bottom,darken($color: #2A1B3D, $amount: 10) 1px, transparent 1px);
+
+
+    p {
+    padding:0;
+    margin: 0;
+    color:white;
+    }
+}
+
+$desktop: "(min-width: 1024px)";
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
+$small-phone: "(min-width: 300px) and (max-width: 360px)";
+
+@media #{$desktop}{
+    a {
+        font-size: 24px;
+    }
     
 }
+
+@media #{$tablet}{
+    a {
+        font-size: 20px;
+    }
+    
+}
+
+@media #{$small-phone}{
+    a {
+        font-size:18px;
+    }
+    
+}
+
+
+
+
+

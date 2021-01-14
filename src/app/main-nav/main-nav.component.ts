@@ -42,36 +42,28 @@ export class MainNavComponent {
 
     this.innerHeight = window.innerHeight;
     this.innerWidth = window.innerWidth;
-
-    //keeping githuband linkedin links to not overlap other pages
-    if(window.innerHeight<=412){
-      this.navbarContactLinks = 'bottomRelative';
-      // console.log('relative');
-    }else{
-      this.navbarContactLinks = 'bottomAbsolute';
-      // console.log('absolute');
-    }
-
+    
     if(window.innerWidth>500){
 
       this.navbarMobileListItems = 'navbar-mobile-absolute';
-      this.navbarHeader = 'header-mobile-display';
-     
+      this.navbarHeader = 'header-mobile-display';     
       this.showToggle = false;
      
     }
 
-    if(window.innerWidth<=500 && window.innerWidth > 450){
+    if(window.innerWidth<=780 && window.innerWidth > 445){
 
-      this.navbarMobileListItems = 'navbar-mobile-relative';
-    
+      this.navbarMobileListItems = 'navbar-mobile-relative';    
+      this.navbarHeader = 'header-mobile-display';  
       this.showToggle = false;
+      // this.navbarHeader = 'header-mobile-hide';   
+
     }
+
     if(window.innerWidth<=450){
 
       this.navbarMobileListItems = 'navbar-mobile-hide';
-      this.navbarHeader = 'header-mobile-hide';
-      
+      this.navbarHeader = 'header-mobile-hide';      
       this.showToggle = true;
       
     }   
