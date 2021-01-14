@@ -18,3 +18,10 @@
 
     }
 }
+
+.welcome-text-decorator {
+  width: fit-content;
+  border-bottom: 20px solid;
+  border-color: darken($color: #2A1B3D, $amount: 10);   
+  padding-bottom: 5px;
+}

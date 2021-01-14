@@ -11,6 +11,8 @@ import { map, shareReplay } from 'rxjs/operators';
 })
 export class ProjectsComponent implements OnInit {
 
+  profilePicture: string ='assets/img/main_photo.jpg';
+  
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
