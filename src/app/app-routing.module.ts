@@ -6,6 +6,7 @@ import { ContactComponent} from './contact/contact.component';
 import { ProjectsComponent} from './projects/projects.component';
 import { SkillsComponent} from './skills/skills.component';
 import { EducationComponent} from './education/education.component';
+import { ExperienceComponent} from './experience/experience.component';
 
 
 
@@ -16,7 +17,8 @@ const routes: Routes = [
    {path: 'contact', component:ContactComponent},
    {path: 'projects', component:ProjectsComponent},
    {path: 'skills', component:SkillsComponent},
-   {path: 'education', component:EducationComponent}
+   {path: 'education', component:EducationComponent},
+   {path: 'experience', component:ExperienceComponent}
    
   
   

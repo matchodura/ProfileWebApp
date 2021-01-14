@@ -10,7 +10,7 @@
     
     <div class="header">       
       <div class="background">
-        <h2>Mateusz Chodura</h2>
+        <h2>Mateusz Chodura </h2>
         <!-- <div class="profile-image">
           <img  [src]="profilePicture" alt="Avatar" class="profile-image">
         </div>                                     -->
@@ -28,10 +28,11 @@
       </div>
 
       <a mat-list-item routerLink = "/"><i class="fa fa-fw fa-home"></i>Home</a>    
-      <a mat-list-item routerLink = "/about"><i class="fa fa-fw fa-user"></i>About</a>
-      <a mat-list-item routerLink = "/education"><i class="fa fa-fw fa-graduation-cap"></i>Education</a>
+      <a mat-list-item routerLink = "/about"><i class="fa fa-fw fa-user"></i>About</a>     
       <a mat-list-item routerLink = "/projects"><i class="fa fa-fw fa-tasks"></i>Projects</a>
       <a mat-list-item routerLink = "/skills"><i class="fa fa-fw fa-wrench"></i>Skills</a>
+      <a mat-list-item routerLink = "/experience"><i class="fa fa-fw fa-star"></i>Experience</a>
+      <a mat-list-item routerLink = "/education"><i class="fa fa-fw fa-graduation-cap"></i>Education</a>
       <a mat-list-item routerLink = "/contact"><i class="fa fa-fw fa-envelope"></i>Contact</a>  
 
     </mat-nav-list>    
@@ -50,7 +51,7 @@
 
       <div [ngClass]='navbarHeader'>       
         <div class="background">
-          <h2>Mateusz Chodura</h2>
+          <h2>Mateusz Chodura develport</h2>
           <!-- <div class="profile-image">
             <img  [src]="profilePicture" alt="Avatar" class="profile-image">
           </div>                                     -->
@@ -66,6 +67,8 @@
         <a mat-list-item *ngIf="isHandset$ | async" routerLink = "/about"><i class="fa fa-fw fa-user"></i>About</a>
         <a mat-list-item *ngIf="isHandset$ | async" routerLink = "/projects"><i class="fa fa-fw fa-tasks"></i>Projects</a>
         <a mat-list-item *ngIf="isHandset$ | async" routerLink = "/skills"><i class="fa fa-fw fa-wrench"></i>Skills</a>
+        <a mat-list-item *ngIf="isHandset$ | async" routerLink = "/experience"><i class="fa fa-fw fa-star"></i>Experience</a>
+        <a mat-list-item *ngIf="isHandset$ | async" routerLink = "/education"><i class="fa fa-fw fa-graduation-cap"></i>Education</a>
         <a mat-list-item *ngIf="isHandset$ | async" routerLink = "/contact"><i class="fa fa-fw fa-envelope"></i>Contact</a>
 
       </div>

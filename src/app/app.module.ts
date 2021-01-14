@@ -23,6 +23,7 @@ import { MatSliderModule } from '@angular/material/slider';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EducationComponent } from './education/education.component';
+import { ExperienceComponent } from './experience/experience.component';
 
 
 
@@ -35,7 +36,8 @@ import { EducationComponent } from './education/education.component';
     AboutComponent,
     SkillsComponent,
     MainNavComponent,
-    EducationComponent
+    EducationComponent,
+    ExperienceComponent
     
     
   ],

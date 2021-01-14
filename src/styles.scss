@@ -6,6 +6,7 @@ html, body {
 }
 
 
+
 .mat-drawer-inner-container::-webkit-scrollbar {
     display: none;
   }
@@ -61,3 +62,24 @@ html, body {
     top:0px;
 }
 
+.container { 
+    min-height: 100%;
+    width: 100%;
+    // background-color: #8265a7;
+    // background-color: darken($color: #a4b3b6, $amount: 0);
+    // background-color: darken($color: #44318D, $amount: 0);
+ 
+    
+    p{
+    padding:0;
+    margin: 0;
+    color:white;
+    }
+
+    background-size: 25px 25px;
+    background-color: darken($color: #2A1B3D, $amount: 5);  
+    background-image:
+    linear-gradient(to right, darken($color: #2A1B3D, $amount: 10) 1px, transparent 1px),
+    linear-gradient(to bottom,darken($color: #2A1B3D, $amount: 10) 1px, transparent 1px);
+    
+}
