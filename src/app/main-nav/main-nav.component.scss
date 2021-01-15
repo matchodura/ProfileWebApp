@@ -20,17 +20,20 @@
     .background {
       background-color:darken($color: #2A1B3D, $amount: 10);     
       position: relative;  
-      height: 100%;
+      height: 125px;  
       width: auto;
-      
-        
+              
       h2{
-        
-        padding: 0;
+        height: 125px;
+        margin: 0;
         top: 0;
         position: absolute;
         color: white;
-        text-align: center;      
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;   
+        
       }
 
 
