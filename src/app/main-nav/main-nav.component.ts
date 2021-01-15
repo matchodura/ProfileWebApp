@@ -43,7 +43,7 @@ export class MainNavComponent {
     this.innerHeight = window.innerHeight;
     this.innerWidth = window.innerWidth;
     
-    if(window.innerWidth>500){
+    if(window.innerWidth>900){
 
       this.navbarMobileListItems = 'navbar-mobile-absolute';
       this.navbarHeader = 'header-mobile-display';     
@@ -51,7 +51,7 @@ export class MainNavComponent {
      
     }
 
-    if(window.innerWidth<=780 && window.innerWidth > 445){
+    if(window.innerWidth<=900 && window.innerWidth > 490){
 
       this.navbarMobileListItems = 'navbar-mobile-relative';    
       this.navbarHeader = 'header-mobile-display';  
@@ -60,7 +60,7 @@ export class MainNavComponent {
 
     }
 
-    if(window.innerWidth<=450){
+    if(window.innerWidth<=490){
 
       this.navbarMobileListItems = 'navbar-mobile-hide';
       this.navbarHeader = 'header-mobile-hide';      

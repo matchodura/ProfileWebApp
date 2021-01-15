@@ -1,5 +1,7 @@
 .sidenav-container {
-  height: 100%;
+  min-height: 100%;
+  min-width: 100%;
+ 
 }
 
 
@@ -23,6 +25,7 @@
       
         
       h2{
+        
         padding: 0;
         top: 0;
         position: absolute;
@@ -55,7 +58,7 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  height: 30px;
+  height: 60px;
   
 
   .item{
@@ -160,8 +163,9 @@
   padding-right: 10px; 
   font-size: 12px;
   margin-top: 0;
+  margin-right: 0;
 
-
+ 
   .mat-list-item:hover {
     color: darken($color: #2A1B3D, $amount: 50);
   
@@ -186,10 +190,13 @@
     opacity: 1;
     transform: scaleX(1);            
   }  
+
+
+ 
 }
 
 ::ng-deep  .navbar-mobile-absolute .mat-list-item-content {
-  padding: 10 20!important;
+  padding: 10 10!important;
   justify-content: top;
   top: 0;
 
@@ -199,25 +206,44 @@
 }
 
 ::ng-deep  .navbar-mobile-relative .mat-list-item-content {
-  padding: 10 20!important;
-  justify-content: top;
+  height: 100%;
+  padding: 0 10!important;
+  justify-content: center;
   top: 0;
+  display: flex;
+  align-items: center;
 
+  
   i {
-    margin-right: 5px;
+    padding: 5 5 5 5;
   }
 }
 
 
 
 .navbar-mobile-relative {  
+  height: 100%;
   display: flex;
-  position: relative;  
+  flex-direction: row;
+  position: absolute;
   right: 0;
-  padding-right: 10px;
+  padding-right: 30px; 
   font-size: 12px;
-
+  margin-top: 0;
+  margin-right: 0;
+  justify-content: space-between;
+  align-items: center;
   
+
+  //hiding text on smaller devices
+  .label{
+    font-size:0px;
+  }
+ 
+  
+ 
+
+
   .mat-list-item:hover {
     color: darken($color: #2A1B3D, $amount: 50);
   
@@ -257,8 +283,6 @@
 }
 
 
-
 .mat-nav-list {
   padding-top: 0;  
 }
-
