@@ -1,58 +1,83 @@
-.page-content {
-    width: 100%;
-    min-height: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    
-      .project-box {
-          width: 80%;
-          height: 500px;
-          margin: 10px;
-          padding: 5px;
-          background: #8265a7;
-          color: white;
-          box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.5), 0 20px 20px 0 rgba(0, 0, 0, 0.5);
-          
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          flex-flow: row wrap;
-          align-items: center;
-          justify-content: center;
+.project-photo {    
+  margin: 10;
+  display: flex;
+  position: relative;       
+      
+  img {
+    border: 2px solid black;
+    border-radius: 0%;    
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+}
 
 
-          .photo {
-            width: 50%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
+.project-photo-content {
+  
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute; 
 
 
-            img {
-                border: 2px solid blueviolet;
-                border-radius: 50%;               
-                max-height: 75%;
-                max-width: 75%;
-                width: auto;
-                height: auto;         
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                margin: auto;    
-              }
-          }
-          
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
 
+
+.project-photo:hover {
+
+
+  img {
+    opacity: 0.3;
   }
 
-  .project-title {
-    width: fit-content;
-    border-bottom: 10px solid;
-    border-color: darken($color: #2A1B3D, $amount: 10);   
-    padding-bottom: 5px;
+
+  .project-photo-content {
+    opacity: 1;
   }
+
+
+  .project-item-tag { 
+    opacity: 0;  
+  }
+}
+
+
+.project-item{
+  background-color: #2a1b3d;
+  color: white;
+  font-size: 16px;
+  // padding: 16px 32px;
+}
+
+
+.project-item-tag {  
+  position: absolute;  
+  z-index: 1000;
+  background-color: black; 
+  color: #FFFFFF;
+  font-weight: bold;
+  opacity: 1;
+}
+
+
+.about-text {
+  // background-color: red;
+  display:flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: stretch;
+
+}
+
+.text-decorator {
+  width: fit-content;
+  border-bottom: 5px solid;
+  border-color: darken($color: #2A1B3D, $amount: 10);   
+  padding-bottom: 5px;
+  font-size: 32px;
 }

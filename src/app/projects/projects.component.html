@@ -1,70 +1,83 @@
 <div class="container">
   <div [ngClass] = "{'page-header-mobile' : (isHandset$ | async),'page-header' : !(isHandset$ | async) }">
-        <h1 class="page-title">
+        <p class="page-title">
               Projects
-        </h1>        
+        </p>        
   </div>
-        <div class="page-content">
-            <div class="project-box">
-                  <div class="project-title">
-                        <h4>Projekt nr 1</h4>
-                        <div class= "project-info">
-                              <p>fajny projekt taki nie za słaby</p>
-                              <p>fajny projekt taki nie za słaby</p>
-                              <p>fajny projekt taki nie za słaby</p>
-                              <p>fajny projekt taki nie za słaby</p>      
-                        </div>
-                  </div>                  
-                  <div class="photo">
-                        <img  [src]="profilePicture" alt="Avatar" class="profile-image">
-                  </div>
-            </div>
-
-            <div class="project-box">
-                  <div class="project-title">
-                        <h4>Projekt nr 2</h4>
-                        <div class= "project-info">
-                              <p>fajny projekt taki nie za słaby</p>
-                              <p>fajny projekt taki nie za słaby</p>
-                              <p>fajny projekt taki nie za słaby</p>
-                              <p>fajny projekt taki nie za słaby</p>      
-                        </div>
-                  </div>                  
-                  <div class="photo">
-                        <img  [src]="profilePicture" alt="Avatar" class="profile-image">
-                  </div>
-            </div>
-
-            <div class="project-box">
-                  <div class="project-title">
-                        <h4>Projekt nr 3</h4>
-                        <div class= "project-info">
-                              <p>fajny projekt taki nie za słaby nie za dobry</p>
-                              <p>fajny projekt taki nie za słaby nie za dobry</p>
-                              <p>fajny projekt taki nie za słaby nie za dobry</p>
-                              <p>fajny projekt taki nie za słaby nie za dobry</p>      
-                        </div>
-                  </div>                  
-                  <div class="photo">
-                        <img  [src]="profilePicture" alt="Avatar" class="profile-image">
-                  </div>
-            </div>
-
-            <div class="project-box">
-                  <div class="project-title">
-                        <h4>Projekt nr 4</h4>
-                        <div class= "project-info">
-                              <p>fajny projekt taki nie za słaby nie za dobry</p>
-                              <p>fajny projekt taki nie za słaby nie za dobry</p>
-                              <p>fajny projekt taki nie za słaby nie za dobry</p>
-                              <p>fajny projekt taki nie za słaby nie za dobry</p>      
-                        </div>
-                  </div>                  
-                  <div class="photo">
-                        <img  [src]="profilePicture" alt="Avatar" class="profile-image">
-                  </div>
-            </div>
+  <div class="page-content">         
+    <div class="about-box">
+      <div class="about-text">
+        <div class="text-decorator">
+           Project title 
+        </div>      
+        <p>super projekt</p>
+        <p>super projekt</p>
+        <p>super projekt</p>
+        <p>super projekt</p>
+        <div class="text-decorator">
+            Technologies used
         </div>
+        <ul>
+          <li>
+           cos raz
+          </li>
+          <li>
+           cos raz
+          </li>
+          <li>
+             cos raz
+          </li>
+          <li>
+                  cos raz
+          </li>
+          <li>
+                  cos raz
+          </li>
+        </ul> 
+      </div>
+      <div class="line-breaker"></div>
+      <div class="project-photo">
+            <img  [src]="profilePicture" alt="Avatar" class="profile-image">
+            <div class="project-item-tag">...</div>
+            <div class="project-photo-content">
+              <div class="project-item">
+                  <a href="https://www.github.com/matchodura/" target="_blank">View live</a>
+              </div>
+              <div class="project-item">
+                  <a href="https://www.github.com/matchodura/" target="_blank">View source</a>
+              </div>
+            </div>      
+          </div>  
+    </div>
 
-     
- </div>
+    <div class="about-box">
+      <div class="about-text">
+        <p> Hello, I am Mateusz. Welcome to my page.</p>
+        <p> Hello, I am Mateusz. Welcome to my page.</p>
+        <p> Hello, I am Mateusz. Welcome to my page.</p>
+        <p> Hello, I am Mateusz. Welcome to my page.</p>
+      </div>
+      <div class="line-breaker"></div>
+      <div class="project-photo">
+        <img  [src]="profilePicture" alt="Avatar" class="profile-image">
+        <div class="project-photo-content">
+          <div class="text">dupa dupa</div>
+        </div>      
+      </div>           
+    </div>
+
+    <div class="about-box">
+      <div class="about-text">
+        <p> Hello, I am Mateusz. Welcome to my page.</p>
+        <p> Hello, I am Mateusz. Welcome to my page.</p>
+        <p> Hello, I am Mateusz. Welcome to my page.</p>
+        <p> Hello, I am Mateusz. Welcome to my page.</p>
+      </div>
+      <div class="line-breaker"></div>
+      <div class="project-photo">
+        <img  [src]="profilePicture" alt="Avatar" class="profile-image">
+      </div>
+           
+    </div>     
+  </div>
+</div>
