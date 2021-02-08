@@ -17,6 +17,17 @@ import {HostListener} from '@angular/core';
 
 export class MainNavComponent {
 
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+  .pipe(
+    map(result => result.matches),
+    shareReplay()
+  );
+
+constructor(private breakpointObserver: BreakpointObserver) {
+       
+  }
+
+
   profilePicture: string ='assets/img/main_photo.jpg';
   profilePictureBackground: string = 'assets/img/background.jpg';
 
@@ -35,13 +46,44 @@ export class MainNavComponent {
         this.innerWidth = window.innerWidth;
         this.innerHeight = window.innerHeight;
 
+
+      
+
+
+        if(window.innerWidth>900){
+
+          this.navbarMobileListItems = 'navbar-mobile-absolute';
+          this.navbarHeader = 'header-mobile-display';     
+          this.showToggle = false;
+         
+        }
+    
+        if(window.innerWidth<=900 && window.innerWidth > 490){
+    
+          this.navbarMobileListItems = 'navbar-mobile-relative';    
+          this.navbarHeader = 'header-mobile-display';  
+          this.showToggle = false;
+          // this.navbarHeader = 'header-mobile-hide';   
+    
+        }
+    
+        if(window.innerWidth<=490){
+    
+          this.navbarMobileListItems = 'navbar-mobile-hide';
+          this.navbarHeader = 'header-mobile-hide';      
+          this.showToggle = true;
+          
+        }  
+
+
+
     }
     
   @HostListener('window:resize', ['$event'] )
   getScreenDimensions(){
-
-    this.innerHeight = window.innerHeight;
-    this.innerWidth = window.innerWidth;
+    console.log("test");
+    // this.innerHeight = window.innerHeight;
+    // this.innerWidth = window.innerWidth;
     
     if(window.innerWidth>900){
 
@@ -70,14 +112,6 @@ export class MainNavComponent {
 
     }
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches),
-      shareReplay()
-    );
-
-  constructor(private breakpointObserver: BreakpointObserver) {
-         
-    }
+ 
 
 }
