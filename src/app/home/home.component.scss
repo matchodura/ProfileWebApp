@@ -1,8 +1,5 @@
 .home-box {
-
   width: auto;
-  // height: 30vw;
-  
   padding: 5px;
   margin-top:8.5%;
   margin-left: 5vw;
@@ -11,11 +8,11 @@
   background: #8265a7;
   color: white;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.5), 0 20px 20px 0 rgba(0, 0, 0, 0.5);
-  // margin-top: 10%;
   display: flex;
   justify-content: left;
   align-items: center;  
 }
+
 
 .welcome-text-decorator {
   width: fit-content;
@@ -23,4 +20,3 @@
   border-color: darken($color: #2A1B3D, $amount: 10);   
   padding-bottom: 5px;
 }
-

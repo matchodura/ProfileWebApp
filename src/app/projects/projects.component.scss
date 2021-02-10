@@ -1,63 +1,21 @@
-.project-photo {    
-  margin: 10;
+.project-buttons {
   display: flex;
-  position: relative;       
-      
-  img {
-    border: 2px solid black;
-    border-radius: 0%;    
-    opacity: 1;
-    transition: .5s ease;
-    backface-visibility: hidden;
-  }
-  
+  flex-direction: row;
 }
-
-
-// .project-photo-content {
-  
-//   transition: .5s ease;
-//   opacity: 0;
-//   position: absolute; 
-
-
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: stretch;
-// }
-
-
-// .project-photo:hover {
-
-
-//   img {
-//     opacity: 0.3;
-//   }
-
-
-//   .project-photo-content {
-//     opacity: 1;
-//   }
-
-
-//   .project-item-tag { 
-//     opacity: 0;  
-//   }
-// }
-
 
 
 .project-item {
   background-color: #2a1b3d;
   padding: 5 5 5 5;
   color: white;
+  text-align: center;
+  margin: 20;
+  width: auto;
 }
 
 
 .project-item:hover {
-  background-color: darken($color: #2a1b3d, $amount: 0.3);
-
+  background-color: green;
 }
 
 
@@ -68,22 +26,4 @@
   color: #FFFFFF;
   font-weight: bold;
   opacity: 1;
-}
-
-
-.about-text {
-  // background-color: red;
-  display:flex;
-  flex-direction: column;
-  justify-content: left;
-  align-items: stretch;
-
-}
-
-.text-decorator {
-  width: fit-content;
-  border-bottom: 5px solid;
-  border-color: darken($color: #2A1B3D, $amount: 10);   
-  padding-bottom: 5px;
-  font-size: 32px;
 }

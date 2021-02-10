@@ -81,7 +81,7 @@ constructor(private breakpointObserver: BreakpointObserver) {
     
   @HostListener('window:resize', ['$event'] )
   getScreenDimensions(){
-    console.log("test");
+   
     // this.innerHeight = window.innerHeight;
     // this.innerWidth = window.innerWidth;
     
