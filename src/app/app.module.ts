@@ -18,14 +18,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-
 import { MatSliderModule } from '@angular/material/slider';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EducationComponent } from './education/education.component';
 import { ExperienceComponent } from './experience/experience.component';
-
-
 
 @NgModule({
   declarations: [
@@ -37,12 +36,11 @@ import { ExperienceComponent } from './experience/experience.component';
     SkillsComponent,
     MainNavComponent,
     EducationComponent,
-    ExperienceComponent
-    
+    ExperienceComponent   
     
   ],
-  imports: [
-   
+
+  imports: [   
     BrowserModule,
     AppRoutingModule,
     FormsModule,
@@ -53,10 +51,13 @@ import { ExperienceComponent } from './experience/experience.component';
     MatIconModule,
     MatListModule,
     MatSliderModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgbModule
    
   ],
+
   providers: [],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }

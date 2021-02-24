@@ -9,8 +9,9 @@
       <div class="about-text">
         <div class="text-decorator">
           Online-Refrigerator
-        </div>      
-        <p>Online-Refrigerator is a web app that allows user to add/modify/view ingredients and recipes. Also it provides a recipe search based on content of his/her refrigerator.</p>
+        </div>   
+        <p>Online-Refrigerator is a web app developped in ASP.NET Core in MVC pattern that allows user to find recipes based on provided ingredients. It is an app to help with making up an idea for dinner or other meal.
+           It provides adding and viewing items in ingredients and recipes base, with side functions like ranking or calorie calculator.</p>
         <div class="text-decorator">
           Technologies/Patterns used
         </div>
@@ -31,16 +32,70 @@
             MS SQL
           </li>
         </ul> 
+        <div class="text-decorator">
+          Main Functions
+        </div>
+        <ul>
+          <li>
+            Responsive Web App with CRUD operations
+          </li>
+          <li>
+            AJAX calls for searching and sorting to improve user experience
+          </li>    
+          <li>
+            Adding ingredients and recipes
+          </li>
+          <li>
+            Finding recipes based on provided ingredients
+          </li>
+          <li>
+            Calculating nutritional values of ingredients
+          </li>
+          <li>
+            Rating recipes by users
+          </li>         
+        </ul> 
       </div>
       <div class="line-breaker"></div>
       <div class="project-photo">
-        <img  [src]="profilePicture" alt="Avatar" class="profile-image">
+        <ngb-carousel>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img [src]="onlineRefrigerator[0]"  alt="Angular Carousel 1">
+            </div>       
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img [src]="onlineRefrigerator[1]"  alt="Angular Carousel 2">
+            </div>          
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img [src]="onlineRefrigerator[2]"  alt="Angular Carousel 2">
+            </div>          
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img [src]="onlineRefrigerator[3]"  alt="Angular Carousel 2">
+            </div>          
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img [src]="onlineRefrigerator[4]"  alt="Angular Carousel 2">
+            </div>          
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img [src]="onlineRefrigerator[5]"  alt="Angular Carousel 2">
+            </div>          
+          </ng-template>       
+        </ngb-carousel>
           <div class="project-buttons">
             <div class="project-item">
-              <a href="https://www.github.com/matchodura/" target="_blank">View live</a>
+              <a href="https://onlinerefrigerator.azurewebsites.net/" target="_blank">View live</a>
             </div>
             <div class="project-item">
-              <a href="https://www.github.com/matchodura/" target="_blank">View source</a>
+              <a href="https://github.com/matchodura/OnlineRefrigerator" target="_blank">View source</a>
             </div>
           </div>           
       </div>  
@@ -50,8 +105,8 @@
         <div class="text-decorator">
            BodyMonitorApp
         </div>      
-        <p>BodyMonitorApp is a Windows desktop app that allows for users to monitor and record their body progress. It's a tool that was mostly made with users that are
-          trying to lose some weight or gain muscle mass.</p>     
+        <p>BodyMonitorApp is a Windows desktop app created with WPF in MVVM pattern that allows for users to record their body progress.
+           It's a tool created with users that are trying to lose weight or gain muscle mass in mind. App works fully offline, as data is stored in local database, allowing to see some charts even with internet off!</p>     
         <div class="text-decorator">
             Technologies/Patterns used
         </div>
@@ -63,28 +118,81 @@
             .NET Framework
           </li>
           <li>
-              WPF
+            WPF
           </li>
           <li>
             MS SQL
           </li>
           <li>
-            Entity Framework
+            ADO.NET
           </li>           
           <li>
             MVVM
           </li>
         </ul> 
+        <div class="text-decorator">
+          Main Functions
+        </div>
+        <ul>
+          <li>
+            Creating and updating user account with full validation
+          </li>
+          <li>
+            Adding and editing values of body parts like chest, biceps, hips and more
+          </li>
+          <li>
+            Displaying records on chart in timespans : year, month, week
+          </li>
+          <li>
+            Catalogue of exercices for selected body parts with youtube videos
+          </li>         
+        </ul> 
       </div>
       <div class="line-breaker"></div>
       <div class="project-photo">
-        <img  [src]="profilePicture" alt="Avatar" class="profile-image">
+        <ngb-carousel>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img [src]="bodyMonitorApp[0]"  alt="Angular Carousel 1">
+            </div>       
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img [src]="bodyMonitorApp[1]"  alt="Angular Carousel 2">
+            </div>          
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img [src]="bodyMonitorApp[2]"  alt="Angular Carousel 3">
+            </div>          
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img [src]="bodyMonitorApp[3]"  alt="Angular Carousel 4">
+            </div>          
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img [src]="bodyMonitorApp[4]"  alt="Angular Carousel 5">
+            </div>          
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img [src]="bodyMonitorApp[5]"  alt="Angular Carousel 6">
+            </div>          
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img [src]="bodyMonitorApp[6]"  alt="Angular Carousel 7">
+            </div>          
+          </ng-template>     
+        </ngb-carousel>
         <div class="project-buttons">
-          <div class="project-item">
+          <!-- <div class="project-item">
             <a href="https://www.github.com/matchodura/" target="_blank">View live</a>
-          </div>
+          </div> -->
           <div class="project-item">
-            <a href="https://www.github.com/matchodura/" target="_blank">View source</a>
+            <a href="https://github.com/matchodura/BodyMonitorApp" target="_blank">View source</a>
           </div>
         </div>  
       </div>  
@@ -95,7 +203,8 @@
            Messier Object Identification
         </div>      
         <p>Messier Object Identification program was a part of my Master's Degree thesis. It's main purpose is recognizing provided photos of space objects a.k.a Messier Objects,
-          and providing propability of correct guess in percents(0-100%). </p>     
+          and providing propability of correct guess in percents(0-100%). Classifier used in application is Convolutional Neural Network created as Keras model with Tensorflow.
+          Besides that, program provides some image processing tools and full Messier catalogue.</p>     
         <div class="text-decorator">
             Technologies used
         </div>
@@ -116,16 +225,49 @@
             Scipy, Numpy
          </li>
         </ul> 
+        <div class="text-decorator">
+          Main Functions
+        </div>
+        <ul>
+          <li>
+            Finding propability of Messier Objects based on provided image
+          </li>
+          <li>
+            Editing and creating new Convolutional Neural Network Model
+          </li>
+          <li>
+            Image processing operations - converting to grayscale, resizing, noising
+          </li>
+          <li>
+            Viewing full catalogue of Messier Objects with trivia about them
+          </li>         
+        </ul> 
       </div>
       <div class="line-breaker"></div>
       <div class="project-photo">
-        <img  [src]="profilePicture" alt="Avatar" class="profile-image">
+        <ngb-carousel>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img [src]="messier[0]"  alt="Angular Carousel 1">
+            </div>       
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img [src]="messier[1]"  alt="Angular Carousel 2">
+            </div>          
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img [src]="messier[2]"  alt="Angular Carousel 2">
+            </div>          
+          </ng-template>
+        </ngb-carousel>
         <div class="project-buttons">
-          <div class="project-item">
+          <!-- <div class="project-item">
             <a href="https://www.github.com/matchodura/" target="_blank">View live</a>
-          </div>
+          </div> -->
           <div class="project-item">
-            <a href="https://www.github.com/matchodura/" target="_blank">View source</a>
+            <a href="https://github.com/matchodura/Messier-Object-Identification" target="_blank">View source</a>
           </div>
         </div>     
      </div>
@@ -135,7 +277,7 @@
         <div class="text-decorator">
            Profile Web App
         </div>      
-        <p>Profile Web App is an Angular project about my personal home page containg informations about my person, my work, experience or education.
+        <p>Profile Web App is an Angular project about my personal home page containg informations about my person, my work, experience and education.
            It's second purpose besides creating profile page was to improve my skills in frontend technologies.</p>
         <div class="text-decorator">
             Technologies used
@@ -159,16 +301,47 @@
         </ul> 
       </div>
       <div class="line-breaker"></div>
+      
       <div class="project-photo">
-        <img  [src]="profilePicture" alt="Avatar" class="profile-image">          
-          <div class="project-buttons">
-            <div class="project-item">
-              <a href="https://www.github.com/matchodura/" target="_blank">View live</a>
-            </div>
-            <div class="project-item">
-              <a href="https://www.github.com/matchodura/" target="_blank">View source</a>
-            </div>
+        <ngb-carousel>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img [src]="profileWebApp[0]"  alt="Angular Carousel 1">
+            </div>       
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img [src]="profileWebApp[1]"  alt="Angular Carousel 2">
+            </div>          
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img [src]="profileWebApp[2]"  alt="Angular Carousel 3">
+            </div>          
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img [src]="profileWebApp[3]"  alt="Angular Carousel 4">
+            </div>          
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img [src]="profileWebApp[4]"  alt="Angular Carousel 5">
+            </div>          
+          </ng-template>         
+        </ngb-carousel>
+           
+        <!-- <img  [src]="profilePicture" alt="Avatar" class="profile-image">           -->
+        <div class="project-buttons">
+          <div class="project-item">
+            <a href="https://matchodura.github.io/ProfileWebApp/" target="_blank">View live</a>
           </div>
+          <div class="project-item">
+            <a href="https://github.com/matchodura/ProfileWebApp" target="_blank">View source</a>
+          </div>
+        </div>
+
+        
       </div>  
     </div>
   </div>
