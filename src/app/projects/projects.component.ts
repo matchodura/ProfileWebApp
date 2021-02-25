@@ -11,6 +11,8 @@ import { map, shareReplay } from 'rxjs/operators';
 })
 export class ProjectsComponent implements OnInit {
 
+  youAreHere: string ='./assets/img/youarehere.png';
+
   onlineRefrigerator:any[] = [
     './assets/projects/online-refrigerator/1.PNG',
     './assets/projects/online-refrigerator/2.PNG',
@@ -38,15 +40,6 @@ export class ProjectsComponent implements OnInit {
     './assets/projects/messier/3.PNG',
     './assets/projects/messier/4.PNG',
     './assets/projects/messier/5.PNG'
-  ];
-
-  profileWebApp:any[] = [
-    './assets/projects/profilewebapp/1.PNG',
-    './assets/projects/profilewebapp/2.PNG',
-    './assets/projects/profilewebapp/3.PNG',
-    './assets/projects/profilewebapp/4.PNG',
-    './assets/projects/profilewebapp/5.PNG'
- 
   ];
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
