@@ -1,0 +1,24 @@
+<div class="container">
+  <div [ngClass] = "{'page-header-mobile' : (isHandset$ | async),'page-header' : !(isHandset$ | async) }">
+    <p class="page-title">
+      About Me
+    </p>        
+  </div>
+  <div class="page-content">
+    <div class="about-box">
+      <div class="about-text" style="justify-content: space-evenly;">
+        <p> I am aspiring .NET developer, creating web and desktop applications in various technologies like ASP.NET, WPF, HTML, CSS and JS. 
+            I graduated Silesian University of Technology with master's degree and have background in automation engineering.
+        </p>
+        <p> I like projecting new things, creating and implementing them to work as they supposed to.
+      </p>
+        <p> In my free time I like skiing, playing video games, printing models in 3D printer and building LEGO sets.
+        </p>         
+      </div>
+      <div class="line-breaker"></div>
+      <div class="photo">
+        <img  [src]="profilePicture" alt="Avatar" class="profile-image">
+      </div>
+    </div>        
+  </div>    
+</div>

@@ -1,0 +1,85 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" 
+      fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    
+    <div class="header">       
+      <div class="background">
+        <h2>Mateusz Chodura</h2>
+        <!-- <div class="profile-image">
+          <img  [src]="profilePicture" alt="Avatar" class="profile-image">
+        </div>                                     -->
+      </div> 
+    </div>     
+    <mat-nav-list>     
+      <div class="contact-links">
+        <div class="item">
+          <a href="https://www.linkedin.com/in/mateuszchodura/" target="_blank"><i class="fa fa-fw fa-linkedin"></i></a> 
+        </div>
+        <div class="item">
+          <a href="https://www.github.com/matchodura/" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+        </div>   
+        <div class="item">
+          <!-- <a href="https://www.github.com/matchodura/" target="_blank"><i class="fa fa-fw fa-github"></i></a> -->
+          <a href="mailto:mat.chodura@gmail.com" target="_blank"><i class="fa fa-fw fa-at"></i></a>
+        </div>         
+      </div>
+
+      <a mat-list-item routerLink = "/"><i class="fa fa-fw fa-home"></i>Home</a>    
+      <a mat-list-item routerLink = "/about"><i class="fa fa-fw fa-user"></i>About</a>     
+      <a mat-list-item routerLink = "/projects"><i class="fa fa-fw fa-tasks"></i>Projects</a>
+      <a mat-list-item routerLink = "/skills"><i class="fa fa-fw fa-wrench"></i>Skills</a>
+      <a mat-list-item routerLink = "/experience"><i class="fa fa-fw fa-star"></i>Experience</a>
+      <a mat-list-item routerLink = "/education"><i class="fa fa-fw fa-graduation-cap"></i>Education</a>
+      <a mat-list-item routerLink = "/contact"><i class="fa fa-fw fa-envelope"></i>Contact</a>  
+
+    </mat-nav-list>    
+
+  </mat-sidenav>
+  <mat-sidenav-content>    
+    <mat-toolbar  *ngIf="isHandset$ | async" color="primary">
+      <div class='background'>
+        <div [ngClass]='navbarHeader'>             
+        <span class="space-reducer">Mateusz </span>
+        <span class="space-reducer">Chodura</span>
+        <span class="space-reducer"></span>                                         
+        </div>       
+      </div>
+     
+      <div [ngClass]='navbarMobileListItems'>     
+        <a mat-list-item *ngIf="isHandset$ | async" routerLink = "/"><i class="fa fa-fw fa-home"></i>
+          <span class="label">Home</span></a>   
+        <a mat-list-item *ngIf="isHandset$ | async" routerLink = "/about"><i class="fa fa-fw fa-user"></i>
+              <span class="label">About</span></a>
+        <a mat-list-item *ngIf="isHandset$ | async" routerLink = "/projects"><i class="fa fa-fw fa-tasks"></i>
+           <span class="label">Projects</span></a>
+        <a mat-list-item *ngIf="isHandset$ | async" routerLink = "/skills"><i class="fa fa-fw fa-wrench"></i>
+           <span class="label">Skills</span></a>
+        <a mat-list-item *ngIf="isHandset$ | async" routerLink = "/experience"><i class="fa fa-fw fa-star"></i>
+           <span class="label">Experience</span></a>
+        <a mat-list-item *ngIf="isHandset$ | async" routerLink = "/education"><i class="fa fa-fw fa-graduation-cap"></i>
+           <span class="label">Education</span></a>
+           <a mat-list-item *ngIf="isHandset$ | async" routerLink = "/contact"><i class="fa fa-fw fa-envelope"></i>
+        <span class="label">Contact</span></a>
+      </div>
+                
+     
+      <div class="toggle-button-container">
+        <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="showToggle">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+         </button>
+      </div>
+
+    
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+    
+  </mat-sidenav-content>
+</mat-sidenav-container>

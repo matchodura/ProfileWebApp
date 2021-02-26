@@ -1,0 +1,53 @@
+<div class="container">
+  <div [ngClass] = "{'page-header-mobile' : (isHandset$ | async),'page-header' : !(isHandset$ | async) }">
+    <p class="page-title">
+      Skills
+    </p>        
+  </div>
+  <div class="page-content">
+    <div class="skills-box">
+      <div class="about-text">
+        <p>Frontend</p>                                         
+      </div>
+      <div class="skills-line-breaker"></div>
+      <div class="skills-images">           
+        <img  [src]="picHTML" alt="Avatar" class="profile-image">   
+        <img  [src]="picCSS" alt="Avatar" class="profile-image">  
+        <img  [src]="picJS" alt="Avatar" class="profile-image">  
+        <img  [src]="picAngular" alt="Avatar" class="profile-image">  
+      </div>  
+    </div>  
+    <div class="skills-box">
+      <div class="about-text">
+        <p>Backend</p>                                         
+      </div>
+      <div class="skills-line-breaker"></div>
+      <div class="skills-images">           
+        <img  [src]="picCSHARP" alt="Avatar" class="profile-image">   
+        <img  [src]="picDOTNET" alt="Avatar" class="profile-image">  
+        <img  [src]="picSQL" alt="Avatar" class="profile-image">  
+      </div>  
+    </div>
+    <div class="skills-box">
+      <div class="about-text">
+        <p>Other Tools</p>                                         
+      </div>
+      <div class="skills-line-breaker"></div>
+      <div class="skills-images">           
+        <img  [src]="picVS" alt="Avatar" class="profile-image">   
+        <img  [src]="picGIT" alt="Avatar" class="profile-image">       
+      </div>  
+    </div>
+    <!-- <div class="skills-box">
+      <div class="about-text">
+        <p>Automation</p>                                         
+      </div>
+      <div class="skills-line-breaker"></div>
+      <div class="skills-images">           
+        <img  [src]="profilePicture" alt="Avatar" class="profile-image">   
+        <img  [src]="profilePicture" alt="Avatar" class="profile-image">  
+        <img  [src]="profilePicture" alt="Avatar" class="profile-image">  
+      </div>  
+    </div>          -->
+  </div>
+</div>
